@@ -40,8 +40,21 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function tres(a, b, c){
-    return a * b * c;
-}
+    if(a!== undefined && b === undefined && c === undefined){
+        return  a;
+    }
+    else if(a !== undefined && b !== undefined && c === undefined){
+        return a + b;
+    }
+    else if(a !== undefined && b !== undefined && c !== undefined){
+        return (a + b) / c;
+    }   
+    else if(a === undefined && b === undefined && c === undefined){
+        return false;
+    }else{
+        return null;
+    }
+} 
 console.log(tres(1, 2, 3) + "2")
 
 // Invoque a função criada acima, passando só dois números como argumento.
